@@ -179,14 +179,17 @@ public class MainActivity extends AppCompatActivity {
 
             // TODO (4) Use ShareCompat.IntentBuilder to build the Intent and start the chooser
             /* ShareCompat.IntentBuilder provides a fluent API for creating Intents */
-            Intent intent =
+            //Intent intent =
             ShareCompat.IntentBuilder.from(this).
-                    setChooserTitle(title).setType(mimeType).setText(text).createChooserIntent();
+                    setType(mimeType)
+                    .setChooserTitle(title)
+                    .setText(text)
+                    .startChooser();
 
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(intent);
-
-            }
+//            if (intent.resolveActivity(getPackageManager()) != null) {
+//                startActivity(intent);
+//
+//            }
 
         }
 
