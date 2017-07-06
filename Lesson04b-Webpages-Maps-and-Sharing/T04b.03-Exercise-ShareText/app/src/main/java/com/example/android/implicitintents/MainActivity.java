@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method shares text and allows the user to select which app they would like to use to
      * share the text. Using ShareCompat's IntentBuilder, we get some really cool functionality for
-     * free. The chooser that is started using the {@link IntentBuilder#startChooser()} method will
+     * free. The chooser that is started using the  {// @link IntentBuilder#startChooser()} method will
      * create a chooser when more than one app on the device can handle the Intent. This happens
      * when the user has, for example, both a texting app and an email app. If only one Activity
      * on the phone can handle the Intent, it will automatically be launched.
