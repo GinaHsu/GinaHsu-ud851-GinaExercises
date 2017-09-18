@@ -34,12 +34,15 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
     }
 
     // TODO (8) Override the onUpgrade method
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("Drop Table if exists "+ WaitlistContract.WaitlistEntry.TABLE_NAME);
 
         // TODO (9) Inside, execute a drop table query, and then call onCreate to re-create it
+        // For now simply drop the table and create a new one. This means if you change the
+        // DATABASE_VERSION the table will be dropped.
+        // In a production app, this method might be modified to ALTER the table
+        // instead of dropping it, so that existing data is not deleted.
+        db.execSQL("Drop Table if exists "+ WaitlistContract.WaitlistEntry.TABLE_NAME);
         onCreate(db);
     }
 }
