@@ -41,6 +41,11 @@ public class TestUtil {
         cv.put(WaitlistContract.WaitlistEntry.COLUMN_PARTY_SIZE, 45);
         list.add(cv);
 
+        cv = new ContentValues();
+        cv.put(WaitlistContract.WaitlistEntry.COLUMN_GUEST_NAME, "Gina");
+        cv.put(WaitlistContract.WaitlistEntry.COLUMN_PARTY_SIZE, 77);
+        list.add(cv);
+
         //insert all guests in one transaction
         try
         {
