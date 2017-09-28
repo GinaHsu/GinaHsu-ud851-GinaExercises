@@ -22,7 +22,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <EditText
-            android:id="@+id/party_count_edit_text"
+            android:id="@+id/party_size_edit_text"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:contentDescription="@string/party_size_hint"
