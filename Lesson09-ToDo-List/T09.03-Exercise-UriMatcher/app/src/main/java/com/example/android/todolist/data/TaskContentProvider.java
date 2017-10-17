@@ -54,7 +54,7 @@ public class TaskContentProvider extends ContentProvider {
         The two calls below add matches for the task directory and a single item by ID.
          */
         uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS);
-        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS_ID);
+        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", TASKS_ID);
 
         return uriMatcher;
 
