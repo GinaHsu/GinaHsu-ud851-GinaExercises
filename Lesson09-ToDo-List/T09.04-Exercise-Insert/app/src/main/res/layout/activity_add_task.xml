@@ -120,6 +120,8 @@
     </FrameLayout>
 
     <!-- Add button -->
+    <!--This corresponds to a method of the same name in the
+    AddTaskActivity.java-->
     <Button
         android:id="@+id/addButton"
         android:layout_width="match_parent"
