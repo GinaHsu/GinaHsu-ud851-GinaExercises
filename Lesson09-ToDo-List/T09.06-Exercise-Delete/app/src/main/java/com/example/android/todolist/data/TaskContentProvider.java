@@ -139,6 +139,27 @@ public class TaskContentProvider extends ContentProvider {
                         null,
                         sortOrder);
                 break;
+
+            //Add a case to query for a single row of data by ID
+            case TASK_WITH_ID:
+                //Using selection and selectionArgs
+                //URI: content://<authority>/tasks/#
+                // Get the id from the URI
+                String id = uri.getPathSegments().get(1);
+
+                // Selection is the _ID column = ?, and the Selection args = the row ID from the URI
+                String mSelection = "_id=?";
+                String[] mSelectionArgs = new String[]{id};
+
+                // Construct a query as you would normally, passing in the selection/args
+                retCursor =  db.query(TABLE_NAME,
+                        projection,
+                        mSelection,
+                        mSelectionArgs,
+                        null,
+                        null,
+                        sortOrder);
+                break;
             // Default exception
             default:
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
@@ -157,13 +178,31 @@ public class TaskContentProvider extends ContentProvider {
     public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
 
         // TODO (1) Get access to the database and write URI matching code to recognize a single item
+        final SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
+        int match = sUriMatcher.match(uri);
+        //Keep track of the number of deleted tasks
+        int tasksDeleted; //Start as 0
 
         // TODO (2) Write the code to delete a single row of data
         // [Hint] Use selections to delete an item by its row ID
+        switch (match){
+            case TASK_WITH_ID:
+                //Get the task ID from the URI path
+                String id = uri.getPathSegments().get(1);
+
+                //Use selections and selectionArgs to filter for this ID
+                tasksDeleted = db.delete(TABLE_NAME, "_id=?", new String[] {id});
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown uri: "+ uri);
+        }
 
         // TODO (3) Notify the resolver of a change and return the number of items deleted
-
-        throw new UnsupportedOperationException("Not yet implemented");
+        if(tasksDeleted != 0){
+            //A task was deleted, set notification
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
+        return tasksDeleted;
     }
 
 
