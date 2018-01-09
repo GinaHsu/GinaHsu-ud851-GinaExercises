@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(mChargingReceiver, mChargingIntentFilter);
 
         // The developer documentation shows how to get battery information pre Android M:
         // https://developer.android.com/training/monitoring-device-state/battery-monitoring.html
