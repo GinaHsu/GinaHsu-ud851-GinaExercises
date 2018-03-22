@@ -13,20 +13,20 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        ActionBar actionbar = this.getSupportActionBar();
-
-        //set the action bar back button to look like an up button
-        if(actionbar != null){
-            actionbar.setDisplayHomeAsUpEnabled(true);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == android.R.id.home){
-            NavUtils.navigateUpFromSameTask(this);
-        }
-        return super.onOptionsItemSelected(item);
+//        ActionBar actionbar = this.getSupportActionBar();
+//
+//        //set the action bar back button to look like an up button
+//        if(actionbar != null){
+//            actionbar.setDisplayHomeAsUpEnabled(true);
+//        }
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if(id == android.R.id.home){
+//            NavUtils.navigateUpFromSameTask(this);
+//        }
+//        return super.onOptionsItemSelected(item);
     }
 }

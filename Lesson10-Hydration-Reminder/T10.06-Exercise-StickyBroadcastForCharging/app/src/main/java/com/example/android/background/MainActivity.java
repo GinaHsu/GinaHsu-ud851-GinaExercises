@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
 
+
         // The developer documentation shows how to get battery information pre Android M:
         // https://developer.android.com/training/monitoring-device-state/battery-monitoring.html
         // In Android M and beyond you can simply get a reference to the BatteryManager and call

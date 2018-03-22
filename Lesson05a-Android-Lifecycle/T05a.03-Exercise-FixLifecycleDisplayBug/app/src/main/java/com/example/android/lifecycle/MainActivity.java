@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // TODO (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
-        for(int i = 0; i < mLifecycleCallbacks.size(); i++){
+        for (int i = mLifecycleCallbacks.size() - 1; i >= 0; i--) {
             mLifecycleDisplay.append(mLifecycleCallbacks.get(i).toString() + "\n");
         }
         // TODO (5) Clear mLifecycleCallbacks after iterating through it
@@ -139,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        // TODO (2) Add the ON_STOP String to the front of mLifecycleCallbacks
-        mLifecycleCallbacks.add(ON_STOP);
+        // TODO (2) Add the ON_STOP String to the FRONT of mLifecycleCallbacks
+        mLifecycleCallbacks.add(0, ON_STOP);
         logAndAppend(ON_STOP);
     }
 
@@ -166,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        // TODO (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
-        mLifecycleCallbacks.add(ON_DESTROY);
+        // TODO (3) Add the ON_DESTROY String to the FRONT of mLifecycleCallbacks
+        mLifecycleCallbacks.add(0, ON_DESTROY);
         logAndAppend(ON_DESTROY);
     }
 

@@ -176,7 +176,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
      */
     class NumberViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener{
-
+        echo "# MeowPopularMovie" >> README.md
         // Will display the position in the list, ie 0 through getItemCount() - 1
         TextView listItemNumberView;
 

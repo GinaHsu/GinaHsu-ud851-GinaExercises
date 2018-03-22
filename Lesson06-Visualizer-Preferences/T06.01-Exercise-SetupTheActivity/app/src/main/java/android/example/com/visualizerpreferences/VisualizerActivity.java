@@ -22,6 +22,7 @@ import android.content.pm.PackageManager;
 import android.example.com.visualizerpreferences.AudioVisuals.AudioInputReader;
 import android.example.com.visualizerpreferences.AudioVisuals.SettingActivity;
 import android.example.com.visualizerpreferences.AudioVisuals.VisualizerView;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -53,8 +54,8 @@ public class VisualizerActivity extends AppCompatActivity {
         mVisualizerView.setShowBass(true);
         mVisualizerView.setShowMid(true);
         mVisualizerView.setShowTreble(true);
-        mVisualizerView.setMinSizeScale(1);
-        mVisualizerView.setColor(getString(R.string.pref_color_red_value));
+        mVisualizerView.setMinSizeScale(5);
+        mVisualizerView.setColor(getString(R.string.pref_color_blue_value));
     }
 
     /**

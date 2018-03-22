@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e(LOG_TAG, e.getMessage());
         }
         // TODO (14) call addNewGuest with the guest name and party size
+        // Add guest info to mDb
         addGuest(mNewGuessNameEditText.getText().toString(),partySize);
 
         // TODO (19) call mAdapter.swapCursor to update the cursor by passing in getAllGuests()

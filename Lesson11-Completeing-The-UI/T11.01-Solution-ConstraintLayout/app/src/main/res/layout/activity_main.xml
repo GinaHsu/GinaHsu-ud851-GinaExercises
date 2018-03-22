@@ -302,31 +302,32 @@
             />
 
         <TextView
-            tools:text="@string/terminal"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
             android:id="@+id/textViewTerminal"
-            app:layout_constraintTop_toTopOf="@+id/tableImage"
-            app:layout_constraintLeft_toLeftOf="@+id/tableImage"
-            app:layout_constraintRight_toRightOf="@+id/tableImage"
+            android:layout_width="70dp"
+            android:layout_height="61dp"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@android:color/white"
             app:layout_constraintHorizontal_bias="0.0"
-            android:textAlignment="center" />
+            app:layout_constraintLeft_toLeftOf="@+id/tableImage"
+            app:layout_constraintRight_toRightOf="@+id/tableImage"
+            app:layout_constraintTop_toTopOf="@+id/tableImage"
+            tools:text="@string/terminal" />
 
 
         <TextView
             android:id="@+id/textViewGate"
-            tools:text="@string/gate"
             android:layout_width="120dp"
             android:layout_height="0dp"
-            app:layout_constraintLeft_toLeftOf="@+id/tableImage"
-            app:layout_constraintRight_toRightOf="@+id/tableImage"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@android:color/white"
-            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tableImage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@+id/tableImage"
+            app:layout_constraintRight_toRightOf="@+id/tableImage"
             app:layout_constraintTop_toBottomOf="@+id/tableHeaderImage"
-            app:layout_constraintBottom_toBottomOf="@+id/tableImage"/>
+            tools:text="@string/gate" />
 
         <TextView
             android:id="@+id/textViewSeat"

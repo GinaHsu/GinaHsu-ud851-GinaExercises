@@ -87,6 +87,8 @@ public class NotificationUtils {
         /* WATER_REMINDER_NOTIFICATION_ID allows you to update or cancel the notification later on */
         notificationManager.notify(WATER_REMINDER_NOTIFICATION_ID, notificationBuilder.build());
     }
+
+
     //  COMPLETED (5) Add a static method called ignoreReminderAction
     private static Action ignoreReminderAction(Context context) {
         // COMPLETED (6) Create an Intent to launch WaterReminderIntentService

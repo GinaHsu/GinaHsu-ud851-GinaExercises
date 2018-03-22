@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- colors for general appearance -->
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorPrimaryLight">#C5CAE9</color>
-    <color name="colorAccent">#303F9F</color>
+    <color name="colorPrimary">#aa99aa</color>
+    <color name="colorPrimaryDark">#bb8855</color>
+    <color name="colorPrimaryLight">#226677</color>
+    <color name="colorAccent">#8899aa</color>
 
     <!-- colors for task priority selection -->
     <color name="materialRed">#E74C3C</color>
